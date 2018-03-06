@@ -2,15 +2,16 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Main {
+public class AnotherClass {
+
 
 	static Logger logger = LogManager.getLogger();
 	
-	public static void main(String[] args) {
+		public void  testMethod() {
 
-		logger.log(Level.ERROR, "Fake error!");
-		AnotherClass ac = new AnotherClass();
-		ac.testMethod();
+		logger.log(Level.FATAL, "Fake FATAL event!");
+		logger.log(Level.INFO, "Info event.");
+
 	}
 
 }
